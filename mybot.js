@@ -65,7 +65,7 @@ client.on("message", message => {
   if (message.author.id !== 324920582665928727) return;
   message.reply("UR NOT AN OWNER!!!!!!");
   if (message.content === (prefix + "ping")) {
-    message.channel.send("Ping? 🏓 ").then(m => m.edit(`🏓 Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API latency is ${Math.trunc(client.ping)}ms!`));
+    message.channel.send("Ping? 🏓 ").then(m => m.edit(`🏓 Pong! Latency is ${m.createdTimestamp - message.createdTimestamp} ms. API latency is ${Math.trunc(client.ping)}ms!`));
   }
   if (message.content.startsWith(prefix + "jj")) {
     message.reply("bye");
@@ -147,7 +147,7 @@ client.on("message", message => {
     }
   }
   if (message.content === (prefix + "funny")) {
-    message.reply(":smile: Hey I once saw a man that had an axe and he dropped it on his foot because he thought his foot was the wood. :smile:");
+    message.reply("😄 Hey I once saw a man that had an axe and he dropped it on his foot because he thought his foot was the wood. :smile:");
   }
 
 
@@ -313,7 +313,7 @@ client.on("message", message => {
       return message.reply("u dont have perms to use");
     }
     if (message.mentions.users.size === 0) {
-      return message.reply("Plz mention");
+      return message.reply("plz mention");
     }
     let kickMember = message.guild.member(message.mentions.users.first());
     if (!kickMember) {
@@ -322,7 +322,7 @@ client.on("message", message => {
     if (!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
       return message.reply("dont have perms kick members");
     }
-    kickMember.kick().then(message.reply(`${message.member.user.username} has been kicked by modeerator ${message.author.name}`));
+    kickMember.kick().then(message.reply(`${message.member.user.username} has been kicked by moderator ${message.author.name}`));
   }
 });
 //.then(member => {
